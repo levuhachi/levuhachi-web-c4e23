@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bike Rental Service</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='ex4.css') }}">
+</head>
+<style>
+
+body {
+   font-family: 'Open Sans', sans-serif;
+   font-size: 30px;
+   background: url("https://i1.wp.com/www.iamabiker.com/wp-content/uploads/2012/03/KTM-Duke-200-wallpaper-8.jpg");
+   color: aliceblue;
+   position: fixed;
+   top: 100px;
+   left: 50px;
+
+}
+h1{
+    font-size: 50px;
+    font-style: bold;
+    color:orange;
+
+}
+button{
+    background-color: orange;
+    border: none;
+    font-size: 30px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0), 0 3px 6px 0 rgba(0,0,0);
+    position: fixed;
+    left: 320px; 
+
+}
+input[type="text"]{
+    border:none;
+    border-bottom: 2px solid white;
+    padding: 2px 5px;
+    padding-right: 15px;
+    height: 30px;
+    font-size: 25px;
+    position: fixed;
+    left: 320px;
+}
+label{
+    padding-left: 10px;
+}
+
+.text-line{
+    background-color: transparent;
+    color: #eeeeee;
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid #eeeeee 1px;
+    padding: 9px 30px;
+}
+div.transbox{
+    /* opacity: 0.5;  */
+    background-color: rgba(0,0,0,0.5);
+    top: 50px;
+    width: 630px;
+    height: 500px;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin: auto;
+} 
+
+</style>
+
+<body>
+<div class = "transbox">
+    <h1>Bike Rental Service</h1>
+    <form method="POST">
+        <label> Model </label> 
+        <input type="text" class ="text-line" placeholder="e.g: Honda" name = "model"> <br><br>
+        <label> Daily Fee (VND) </label>
+        <input type="text" class ="text-line" placeholder= "e.g: 100000" name="daily_fee"> <br><br>
+        <label> Image </label>
+        <input type="text" class ="text-line" placeholder="e.g: https://hondaxemay.com.vn/san-pham/msx-125cc/" name = "image"><br><br>
+        <label> Year </label> 
+        <input type="text" class ="text-line" placeholder="e.g: 2013" name = "year">
+        <br><br><button> Submit </button>
+    </form>
+</div>
+</body>
+
+</html>
